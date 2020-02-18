@@ -15,6 +15,8 @@ int main() {
          << " [1] Windows command line [ CMD ] "
          << endl << endl
          << " [2] Windows Powershell   [ PWS ] "
+         << endl << endl
+         << " [3] Exit CyberConsole            "
          << endl << endl;
 
     cout << " >> ";
@@ -25,21 +27,23 @@ int main() {
     switch (choice)
     {
         case 1:
-        Sleep(650);
-        system("cls");
-        SetConsoleTitle(TEXT("CyberConsole  [CMD]  "));
-        system("cmd");
+            Sleep(650);
+            system("cls");
+            SetConsoleTitle(TEXT("CyberConsole  [CMD]  "));
+            system("cmd");
             break;
 
         case 2:
-        Sleep(650);
-        system("cls");
-        SetConsoleTitle(TEXT("CyberConsole  [PWS]  "));
-        system("powershell");
+            Sleep(650);
+            system("cls");
+            SetConsoleTitle(TEXT("CyberConsole  [PWS]  "));
+            system("powershell");
             break;
-
+        case 3:
+            return 0;
+            break;
         default:
-        system("cls");
+            system("cls");
             break;
     }
     main();
